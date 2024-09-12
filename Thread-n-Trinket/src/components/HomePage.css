@@ -1,0 +1,45 @@
+  .homepage {
+  
+    background-color: #f9f9f9;
+  }
+
+.navbar-divider {
+  border: none;
+  border-top: 1px solid #ccc; 
+  margin: 20px 0; 
+}
+
+  .input{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .homepage-header {
+    margin-bottom: 2rem;
+  }
+  
+  .featured-products {
+    margin-top: 2rem;
+  }
+  
+  .product-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  
+  .product-card {
+    width: 200px;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer {
+    margin-top: 10rem;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+  }
+  
