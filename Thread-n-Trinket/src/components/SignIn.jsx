@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './SignIn.css'; // Create this CSS file for styling
 import Header from './Header';
+import Footer from './Footer';
 
 const SignIn = () => {
   const [username, setUsername] = useState('');
@@ -76,6 +77,7 @@ const SignIn = () => {
         <button type="submit" className="submit-button">Sign In</button>
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

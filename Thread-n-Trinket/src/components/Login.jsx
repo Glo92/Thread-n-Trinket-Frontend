@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigat
 import './Login.css'; // Create this CSS file for styling
 import HomePage from './HomePage';
 import Header from './Header';
+import Footer from './Footer';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -63,6 +64,7 @@ const Login = () => {
         Don't have an account? <Link to="/signin" className="signin-link-text">Sign In</Link>
       </p>
     </div>
+    <Footer/>
     </div>
   );
 };

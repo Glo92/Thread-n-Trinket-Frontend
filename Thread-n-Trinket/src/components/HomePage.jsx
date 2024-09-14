@@ -4,6 +4,7 @@ import "./HomePage.css";
 
 import NavBar from './NavBar';
 import Header from './Header';
+import Footer from './Footer';
 
 const HomePage = () => {
   return (
@@ -23,10 +24,7 @@ const HomePage = () => {
         />
       </div>
 
-      <footer className='text-center mt-4'>
-        <p>© 2024 Thread and Trinket. All rights reserved.</p>
-        <h3>Contact Us:</h3>
-      </footer>
+     <Footer/>
     </div>
   );
 };

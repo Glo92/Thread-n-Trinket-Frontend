@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function WomenWear() {
   return (
@@ -8,6 +9,7 @@ function WomenWear() {
       <Header/>
         <NavBar/>
         WomenWear
+        <Footer/>
 
     </div>
   )
