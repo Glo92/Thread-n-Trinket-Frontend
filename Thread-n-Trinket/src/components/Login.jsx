@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import './SignIn.css'; // Create this CSS file for styling
+import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigation
+import './Login.css'; // Create this CSS file for styling
+import HomePage from './HomePage';
 import Header from './Header';
 
-const SignIn = () => {
-  const [username, setUsername] = useState('');
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -12,44 +12,28 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Replace with your sign-in logic
-    if (username === '' || email === '' || password === '') {
-      setError('All fields are required.');
+    if (email === '' || password === '') {
+      setError('Email and password are required.');
       return;
     }
-    // Clear the error
     setError('');
-    // Handle the sign-in process (e.g., make an API request)
-    console.log('Username:', username);
     console.log('Email:', email);
     console.log('Password:', password);
     
-    // Clear the input fields
-    setUsername('');
     setEmail('');
     setPassword('');
 
-    // Redirect to login page after sign-in
-    navigate('/login');
+    navigate('/');
   };
 
   return (
+
     <div>
         <Header/>
-    <div className="signin-container">
-      <h2 className="signin-heading">Sign In</h2>
-      <form onSubmit={handleSubmit} className="signin-form">
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-            className="form-input"
-          />
-        </div>
+    <div className="login-container">
+        
+      <h2 className="login-heading">Login</h2>
+      <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
@@ -73,11 +57,14 @@ const SignIn = () => {
           />
         </div>
         {error && <p className="error-message">{error}</p>}
-        <button type="submit" className="submit-button">Sign In</button>
+        <button type="submit" className="submit-button">Login</button>
       </form>
+      <p className="signin-link">
+        Don't have an account? <Link to="/signin" className="signin-link-text">Sign In</Link>
+      </p>
     </div>
     </div>
   );
 };
 
-export default SignIn;
+export default Login
